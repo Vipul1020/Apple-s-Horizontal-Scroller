@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+:root {
+  --primary-color: #005c97;
+  --accent-color: #00b4db;
+  --background-light: #f5f5f7;
+  --text-dark: #1d1d1f;
+  --heading-font: "Poppins", sans-serif;
+  --body-font: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.horizontal-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 10px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex-shrink: 0;
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  scroll-snap-align: start;
+}
+
+.card-content {
+  padding: 30px;
+  text-align: center;
+}
+
+.card-content.special-card {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.card-content .eyebrow {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #bf4800;
+  margin: 0;
+}
+
+.card-content h2 {
+  font-size: 1.8em;
+  margin: 5px 0;
+}
+
+.card-content .apple-logo-art {
+  font-size: 5em;
+  margin-top: 20px;
+}
+
+.card-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.card-content .product-title {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.card-content .price {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.card.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
